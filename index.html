@@ -47,7 +47,7 @@
 <!-- Sección principal -->
 <main>
   <section class="hero container">
-    <h1 class="hero-title">Mi Primer Proyecto con Git</h1>
+    <h1 class="hero-title">Mi Proyecto con Git</h1>
     <p class="hero-description">
       Bienvenido a mi proyecto de aprendizaje sobre control de versiones con Git y GitHub.
       Esta página demuestra buenas prácticas de codificación y estructura en desarrollo web.
@@ -80,6 +80,118 @@
     </div>
   </section>
 </main>
+
+<!-- Sección de estándares de codificación -->
+<section id="standards" class="standards container">
+  <h2 class="section-title">Estándares de Codificación</h2>
+
+  <h3>Lenguajes utilizados en el proyecto</h3>
+  <ul>
+    <li><strong>HTML (HyperText Markup Language):</strong> Define la estructura y contenido de la página web utilizando HTML5 con etiquetas semánticas.</li>
+    <li><strong>CSS (Cascading Style Sheets):</strong> Define la presentación visual incluyendo colores, tipografía, espaciado, y diseño responsive.</li>
+    <li><strong>JavaScript:</strong> Añade interactividad a la página, maneja eventos y mejora la experiencia de usuario.</li>
+  </ul>
+
+  <h3>Estándares HTML</h3>
+  <ul>
+    <li><strong>Declaración DOCTYPE:</strong> Siempre incluir para asegurar la interpretación correcta del HTML5.</li>
+    <li><strong>Etiqueta lang:</strong> Especificar el idioma del documento para accesibilidad y SEO.</li>
+    <li><strong>Meta tags:</strong> Incluir meta etiquetas esenciales para codificación y visualización.</li>
+    <li><strong>Estructura semántica:</strong> Usar etiquetas semánticas en lugar de divs genéricos.</li>
+    <li><strong>Indentación:</strong> 4 espacios para cada nivel de anidamiento.</li>
+  </ul>
+  <div class="code-example">
+    &lt;!DOCTYPE html&gt;<br>
+    &lt;html lang="es"&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;
+  </div>
+
+  <h3>Estándares CSS</h3>
+  <ul>
+    <li><strong>Variables CSS:</strong> Utilizar para valores reusables como colores y tamaños.</li>
+    <li><strong>Organización:</strong> Agrupar estilos relacionados y comentar secciones principales.</li>
+    <li><strong>Media Queries:</strong> Implementar para asegurar diseño responsive.</li>
+    <li><strong>Selectores:</strong> Mantener selectores simples y evitar excesiva especificidad.</li>
+    <li><strong>Reset/Normalize:</strong> Incluir reset CSS para consistencia entre navegadores.</li>
+  </ul>
+  <div class="code-example">
+    :root {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;--color-primary: #3498db;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;--color-secondary: #2ecc71;<br>
+    }<br><br>
+    /* Estilos para navegación */<br>
+    .nav-item {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 30px;<br>
+    }
+  </div>
+
+  <h3>Estándares JavaScript</h3>
+  <ul>
+    <li><strong>"use strict":</strong> Usar modo estricto para evitar errores comunes.</li>
+    <li><strong>Programación orientada a objetos:</strong> Utilizar clases para organizar el código.</li>
+    <li><strong>Event listeners:</strong> Usar addEventListener en lugar de atributos HTML.</li>
+    <li><strong>Contexto (this):</strong> Mantener el contexto correcto con .bind() o arrow functions.</li>
+    <li><strong>DOMContentLoaded:</strong> Inicializar scripts cuando el DOM esté cargado.</li>
+  </ul>
+  <div class="code-example">
+    "use strict";<br><br>
+    class NavManager {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;constructor() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.init();<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;init() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const navLinks = document.querySelectorAll('.nav-link');<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;navLinks.forEach(link => {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;link.addEventListener('click', this.handleNavClick.bind(this));<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    }
+  </div>
+
+  <h3>Nomenclatura para variables y constantes</h3>
+  <ul>
+    <li><strong>HTML - IDs:</strong> Usar camelCase o kebab-case consistentemente: <code>mainContainer</code> o <code>main-container</code></li>
+    <li><strong>HTML - Clases:</strong> Usar kebab-case: <code>feature-card</code>, <code>nav-item</code></li>
+    <li><strong>CSS - Variables:</strong> Usar kebab-case con prefijo --: <code>--color-primary</code>, <code>--font-size-heading</code></li>
+    <li><strong>JavaScript - Variables:</strong> Usar camelCase: <code>let userName = 'Juan'</code></li>
+    <li><strong>JavaScript - Constantes:</strong> Usar camelCase para instancias: <code>const navManager = new NavManager()</code></li>
+    <li><strong>JavaScript - Constantes globales:</strong> Usar UPPER_SNAKE_CASE: <code>const API_KEY = 'abc123'</code></li>
+  </ul>
+
+  <h3>Nomenclatura para clases, métodos y comentarios</h3>
+  <ul>
+    <li><strong>Clases:</strong> PascalCase (primera letra mayúscula): <code>class NavManager {}</code></li>
+    <li><strong>Métodos:</strong> camelCase, verbos o frases verbales: <code>handleClick() {}</code></li>
+    <li><strong>Comentarios HTML:</strong> <code>&lt;!-- Encabezado principal del sitio --&gt;</code></li>
+    <li><strong>Comentarios CSS:</strong> <code>/* Estilos para la navegación principal */</code></li>
+    <li><strong>Comentarios JavaScript:</strong></li>
+  </ul>
+  <div class="code-example">
+    /**<br>
+    * Maneja el evento de clic en los enlaces de navegación<br>
+    * @param {Event} event - El evento del navegador<br>
+    * @return {void}<br>
+    */<br>
+    handleNavClick(event) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// Implementación...<br>
+    }
+  </div>
+
+  <h3>Buenas prácticas implementadas</h3>
+  <ul>
+    <li><strong>Separación de responsabilidades:</strong> HTML para estructura, CSS para estilos, JavaScript para comportamiento.</li>
+    <li><strong>Código limpio:</strong> Siguiendo principios de legibilidad y mantenibilidad.</li>
+    <li><strong>Responsive Design:</strong> Media queries para asegurar buena experiencia en todos los dispositivos.</li>
+    <li><strong>Accesibilidad:</strong> Etiquetas semánticas y contraste de color adecuado.</li>
+    <li><strong>Rendimiento:</strong> Optimización de recursos y estructura CSS eficiente.</li>
+    <li><strong>Control de versiones:</strong> Organizar commits con mensajes descriptivos.</li>
+  </ul>
+</section>
+</main>
+
 
 <!-- Pie de página -->
 <footer>
