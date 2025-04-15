@@ -190,8 +190,142 @@
     <li><strong>Control de versiones:</strong> Organizar commits con mensajes descriptivos.</li>
   </ul>
 </section>
-</main>
 
+</main>
+<!-- Sección de Control de Versiones Git/GitHub -->
+<section id="git-versioning" class="standards container">
+  <h2 class="section-title">Control de Versiones con Git y GitHub</h2>
+
+  <h3>Configuración inicial del repositorio</h3>
+  <div class="code-example">
+    # Inicializar un repositorio Git<br>
+    git init<br><br>
+    # Configurar información del usuario<br>
+    git config --global user.name "Tu Nombre"<br>
+    git config --global user.email "tu.email@ejemplo.com"
+  </div>
+
+  <h3>Flujo de trabajo básico</h3>
+  <ol>
+    <li><strong>Área de trabajo</strong> → <strong>Área de preparación</strong> → <strong>Repositorio local</strong> → <strong>Repositorio remoto</strong></li>
+  </ol>
+  <div class="code-example">
+    # Verificar el estado de los archivos<br>
+    git status<br><br>
+    # Añadir archivos al área de preparación<br>
+    git add index.html<br>
+    git add .<br><br>
+    # Crear un commit con los cambios<br>
+    git commit -m "Descripción clara del cambio realizado"<br><br>
+    # Enviar cambios al repositorio remoto<br>
+    git push origin main
+  </div>
+
+  <h3>Buenas prácticas para commits</h3>
+  <ul>
+    <li><strong>Commits atómicos:</strong> Cada commit debe representar un único cambio lógico.</li>
+    <li><strong>Mensajes descriptivos:</strong> Usar verbos en imperativo y explicar el "qué" y el "por qué".</li>
+    <li><strong>Convención en mensajes:</strong>
+      <ul>
+        <li><code>feat:</code> Nueva característica</li>
+        <li><code>fix:</code> Corrección de error</li>
+        <li><code>docs:</code> Cambios en documentación</li>
+        <li><code>style:</code> Cambios de formato (no afectan el código)</li>
+        <li><code>refactor:</code> Refactorización del código</li>
+        <li><code>test:</code> Añadir o modificar pruebas</li>
+      </ul>
+    </li>
+  </ul>
+  <div class="code-example">
+    # Ejemplos de buenos mensajes de commit<br>
+    git commit -m "feat: añadir sección de control de versiones"<br>
+    git commit -m "fix: corregir enlaces de navegación en header"<br>
+    git commit -m "docs: actualizar instrucciones de instalación"
+  </div>
+
+  <h3>Trabajando con ramas</h3>
+  <div class="code-example">
+    # Crear y cambiar a una nueva rama<br>
+    git checkout -b feature/nueva-seccion<br><br>
+    # Listar todas las ramas<br>
+    git branch<br><br>
+    # Cambiar entre ramas<br>
+    git checkout main<br><br>
+    # Fusionar una rama con la rama actual<br>
+    git merge feature/nueva-seccion
+  </div>
+
+  <h3>Estrategia de ramificación</h3>
+  <ul>
+    <li><strong>main/master:</strong> Código estable y listo para producción</li>
+    <li><strong>develop:</strong> Código en desarrollo para próxima versión</li>
+    <li><strong>feature/nombre:</strong> Desarrollo de nuevas características</li>
+    <li><strong>hotfix/nombre:</strong> Correcciones urgentes para producción</li>
+    <li><strong>release/v1.x.x:</strong> Preparación de releases</li>
+  </ul>
+
+  <h3>Conexión con GitHub</h3>
+  <div class="code-example">
+    # Agregar repositorio remoto<br>
+    git remote add origin https://github.com/usuario/repositorio.git<br><br>
+    # Verificar repositorios remotos<br>
+    git remote -v<br><br>
+    # Subir rama al repositorio remoto por primera vez<br>
+    git push -u origin main<br><br>
+    # Clonar un repositorio existente<br>
+    git clone https://github.com/usuario/repositorio.git
+  </div>
+
+  <h3>Pull Requests</h3>
+  <ol>
+    <li><strong>Crear una rama:</strong> Desarrollar una característica en una rama separada</li>
+    <li><strong>Realizar commits:</strong> Hacer cambios y confirmarlos localmente</li>
+    <li><strong>Subir la rama:</strong> <code>git push origin feature/nueva-seccion</code></li>
+    <li><strong>Crear PR en GitHub:</strong> Solicitar la fusión de la rama con main/master</li>
+    <li><strong>Revisión de código:</strong> Otros miembros revisan y comentan los cambios</li>
+    <li><strong>Realizar cambios:</strong> Si es necesario, hacer ajustes según los comentarios</li>
+    <li><strong>Fusionar:</strong> Una vez aprobado, el PR se fusiona en la rama principal</li>
+  </ol>
+
+  <h3>Resolución de conflictos</h3>
+  <div class="code-example">
+    # Al intentar fusionar, pueden surgir conflictos<br>
+    # Git marcará los archivos con conflictos<br><br>
+    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>
+    const VERSION = "1.1.0"; // Tu versión actual<br>
+    =======<br>
+    const VERSION = "1.2.0"; // Versión que intentas fusionar<br>
+    &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/nueva-version<br><br>
+    # Editar el archivo para resolver el conflicto<br>
+    # Añadir el archivo resuelto<br>
+    git add archivo-con-conflicto.js<br>
+    # Continuar la fusión<br>
+    git commit
+  </div>
+
+  <h3>Comandos útiles adicionales</h3>
+  <div class="code-example">
+    # Ver historial de commits<br>
+    git log<br>
+    git log --oneline --graph<br><br>
+    # Deshacer cambios en el área de trabajo<br>
+    git checkout -- index.html<br><br>
+    # Deshacer el último commit (manteniendo cambios)<br>
+    git reset --soft HEAD~1<br><br>
+    # Deshacer cambios en el área de preparación<br>
+    git reset HEAD index.html<br><br>
+    # Crear y aplicar etiquetas (versiones)<br>
+    git tag -a v1.0.0 -m "Primera versión estable"<br>
+    git push origin v1.0.0
+  </div>
+
+  <div class="feature-card" style="margin-top: 30px;">
+    <div class="feature-icon"><i class="fas fa-code-branch"></i></div>
+    <h3 class="feature-title">Recuerda</h3>
+    <p>El control de versiones no solo sirve para guardar código, también es una herramienta de comunicación.
+      Buenos commits y una estructura clara de ramas ayudan a otros desarrolladores (y a tu futuro yo) a entender la evolución del proyecto.</p>
+  </div>
+</section>
 
 <!-- Pie de página -->
 <footer>
