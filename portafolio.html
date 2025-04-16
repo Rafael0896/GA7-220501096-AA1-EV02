@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portafolio.css">
     <meta name="description" content="">
 
     <meta property="og:title" content="">
@@ -20,28 +20,278 @@
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#fafafa">
 
-<!-- Importar iconos de Font Awesome desde CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 <!-- Encabezado de la página -->
 <header>
-  <div class="container header-content">
-    <div class="logo">
-      <span class="logo-icon"><i class="fab fa-git-alt"></i></span>
-      <span>GitProject</span>
-    </div>
+  <div class="container">
     <nav>
-      <ul class="nav-list">
-        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">portafolio</a></li>
-        <li class="nav-item"><a href="landing.html" class="nav-link">Instrumento de evaluación</a></li>
+      <a href="#" class="logo">MiPortfolio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#sobremi">Sobre Mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <button class="hamburger">☰</button>
     </nav>
   </div>
 </header>
 
+<!-- Hero Section -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Rafael Álavarez</h1>
+      <h2>Estudiante de Análisis y Desarrollo de Software</h2>
+      <div>
+        <a href="#proyectos" class="btn">Ver mis proyectos</a>
+        <a href="#contacto" class="btn btn-outline">Contáctame</a>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- About Section -->
+<section id="sobremi">
+  <div class="container">
+    <div class="section-title">
+      <h2>Sobre Mí</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="about-content">
+      <div class="about-img">
+        <img src="/api/placeholder/400/400" alt="Foto de perfil">
+      </div>
+      <div class="about-info">
+        <h3>Apasionado por el desarrollo de software</h3>
+        <p>Soy un estudiante de Análisis y Desarrollo de Software con enfoque en soluciones tecnológicas orientadas a servicios. Mi pasión por la programación comenzó hace [tiempo] y desde entonces he trabajado en diversos proyectos que me han permitido aplicar mis conocimientos y desarrollar nuevas habilidades.</p>
+        <p>Me caracterizo por mi capacidad analítica, pensamiento lógico y habilidad para resolver problemas complejos. Estoy constantemente aprendiendo nuevas tecnologías y metodologías para mantenerme actualizado en este campo en constante evolución.</p>
+        <p>Mi objetivo es convertirme en un desarrollador integral, capaz de diseñar e implementar soluciones eficientes que satisfagan las necesidades de los usuarios y aporten valor real a las organizaciones.</p>
+        <a href="#" class="btn">Descargar CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills" id="habilidades">
+  <div class="container">
+    <div class="section-title">
+      <h2>Mis Habilidades</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="skills-container">
+      <div class="skill-box">
+        <div class="skill-icon">💻</div>
+        <h3 class="skill-title">Desarrollo Frontend</h3>
+        <p>HTML5, CSS3, JavaScript, React, Bootstrap, Responsive Design</p>
+      </div>
+      <div class="skill-box">
+        <div class="skill-icon">⚙️</div>
+        <h3 class="skill-title">Desarrollo Backend</h3>
+        <p>Java, Python, Node.js, Express, PHP, APIs RESTful</p>
+      </div>
+      <div class="skill-box">
+        <div class="skill-icon">🗄️</div>
+        <h3 class="skill-title">Bases de Datos</h3>
+        <p>MySQL, PostgreSQL, MongoDB, Firebase, Modelado de datos</p>
+      </div>
+      <div class="skill-box">
+        <div class="skill-icon">🔍</div>
+        <h3 class="skill-title">Análisis de Software</h3>
+        <p>Requerimientos, UML, Historias de usuario, Casos de uso</p>
+      </div>
+      <div class="skill-box">
+        <div class="skill-icon">📱</div>
+        <h3 class="skill-title">Desarrollo Móvil</h3>
+        <p>Android (Java), React Native, Diseño de interfaces</p>
+      </div>
+      <div class="skill-box">
+        <div class="skill-icon">🔄</div>
+        <h3 class="skill-title">Control de Versiones</h3>
+        <p>Git, GitHub, GitLab, Metodologías de trabajo colaborativo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="proyectos">
+  <div class="container">
+    <div class="section-title">
+      <h2>Mis Proyectos</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="projects-container">
+      <div class="project-card">
+        <div class="project-img">
+          <img src="/api/placeholder/600/400" alt="Proyecto 1">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Sistema de Gestión de Inventarios</h3>
+          <p>Aplicación web para gestionar inventarios de pequeñas empresas con reportes en tiempo real y alertas de stock.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Thymeleaf</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn">Demo</a>
+            <a href="#" class="btn btn-outline">Código</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <img src="/api/placeholder/600/400" alt="Proyecto 2">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">App de Seguimiento de Ejercicios</h3>
+          <p>Aplicación móvil para registrar rutinas de ejercicio, progreso y objetivos personales de fitness.</p>
+          <div class="project-tech">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Node.js</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn">Demo</a>
+            <a href="#" class="btn btn-outline">Código</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-img">
+          <img src="/api/placeholder/600/400" alt="Proyecto 3">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Plataforma E-learning</h3>
+          <p>Plataforma web para cursos en línea con sistema de gestión de contenido, evaluaciones y seguimiento de progreso.</p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">JWT</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn">Demo</a>
+            <a href="#" class="btn btn-outline">Código</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section class="education" id="educacion">
+  <div class="container">
+    <div class="section-title">
+      <h2>Educación y Formación</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <span class="date">2023 - Presente</span>
+          <h3>Análisis y Desarrollo de Software</h3>
+          <p>SENA - Servicio Nacional de Aprendizaje</p>
+          <p>Tecnólogo enfocado en el desarrollo de soluciones de software, control de versiones y metodologías ágiles.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <span class="date">2022</span>
+          <h3>Desarrollo Web Full Stack</h3>
+          <p>Programa de Certificación Online</p>
+          <p>Formación intensiva en tecnologías frontend y backend para el desarrollo de aplicaciones web modernas.</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <span class="date">2021</span>
+          <h3>Fundamentos de Programación</h3>
+          <p>Curso Especializado</p>
+          <p>Introducción a la lógica de programación, estructuras de datos y algoritmos básicos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contacto">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contáctame</h2>
+      <div class="underline"></div>
+    </div>
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Nombre" required>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Asunto">
+      </div>
+      <div class="form-group">
+        <input type="tel" class="form-control" placeholder="Teléfono">
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" placeholder="Mensaje" required></textarea>
+      </div>
+      <div class="form-group" style="text-align: center;">
+        <button type="submit" class="btn">Enviar Mensaje</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <h3>Rafael Álvarez</h3>
+    <p>Estudiante de Análisis y Desarrollo de Software</p>
+  </div>
+</footer>
+
+<script>
+  // Navegación responsive
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Cerrar el menú al hacer clic en un enlace
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+
+  // Desplazamiento suave
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      window.scrollTo({
+        top: targetElement.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
 </body>
+
 </html>
