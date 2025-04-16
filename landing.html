@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Instrumento de evaluación</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instrumento de Evaluación - Análisis y Desarrollo de Software</title>
+  <link rel="stylesheet" href="css/landing.css">
+  <meta name="description content=">
 
   <meta property="og:title" content="">
   <meta property="og:type" content="">
@@ -20,26 +20,130 @@
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 
-  <!-- Importar iconos de Font Awesome desde CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-<!-- Encabezado de la página -->
 <header>
-  <div class="container header-content">
-    <div class="logo">
-      <span class="logo-icon"><i class="fab fa-git-alt"></i></span>
-      <span>GitProject</span>
-    </div>
-    <nav>
-      <ul class="nav-list">
-        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-        <li class="nav-item"><a href="portafolio.html" class="nav-link">portafolio</a></li>
-      </ul>
-    </nav>
-  </div>
+  <img src="img/logo-sena-negro-png-2022-300x294.png" alt="sena" class="logo-sena">
+  <h1>Instrumento de Evaluación</h1>
+  <p>Análisis y Desarrollo de Software</p>
 </header>
 
+<div class="container">
+  <div class="card">
+    <h2>1. DATOS GENERALES</h2>
+    <div class="datos-grid">
+      <div class="dato">
+        <span class="dato-label">Programa de formación</span>
+        <div class="dato-valor">Análisis y desarrollo de software</div>
+      </div>
+
+      <div class="dato">
+        <span class="dato-label">Proyecto formativo</span>
+        <div class="dato-valor">Construcción de software integrador de tecnologías orientadas a servicios</div>
+      </div>
+
+      <div class="dato">
+        <span class="dato-label">Fase proyecto</span>
+        <div class="dato-valor">Ejecución</div>
+      </div>
+
+      <div class="dato">
+        <span class="dato-label">Resultado de aprendizaje</span>
+        <div class="dato-valor">220501096-01 Planear actividades de construcción del software de acuerdo con el diseño establecido</div>
+      </div>
+
+      <div class="dato">
+        <span class="dato-label">Actividad de aprendizaje</span>
+        <div class="dato-valor">GA7-220501096-AA1- Configurar herramientas de versionamiento para control de código</div>
+      </div>
+
+      <div class="dato">
+        <span class="dato-label">Evidencia de desempeño</span>
+        <div class="dato-valor">Definir estándares de codificación de acuerdo a plataforma de desarrollo elegida GA7-220501096-AA1-EV02</div>
+      </div>
+    </div>
+
+    <h3>Criterios de evaluación</h3>
+    <ul class="criterios-list">
+      <li>Interpreta el informe de diseño para definir el plan de trabajo en la construcción del software.</li>
+      <li>Selecciona y configura herramientas de desarrollo de acuerdo con las condiciones del software a construir.</li>
+      <li>Define estándares de codificación de acuerdo con las reglas de la plataforma de desarrollo seleccionada.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>2. LISTA DE CHEQUEO</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>No.</th>
+        <th>VARIABLES/INDICADORES DE LOGRO</th>
+        <th colspan="2">CUMPLE</th>
+        <th>Observaciones</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th>SI</th>
+        <th>NO</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1.</td>
+        <td>Incluye en el informe Estándares de codificación según lenguaje seleccionado.</td>
+        <td><input type="radio" name="item1" value="si"></td>
+        <td><input type="radio" name="item1" value="no"></td>
+        <td class="porcentaje">30%</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Específica nomenclatura para nombramiento de variables y constantes.</td>
+        <td><input type="radio" name="item2" value="si"></td>
+        <td><input type="radio" name="item2" value="no"></td>
+        <td class="porcentaje">30%</td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Específica nomenclatura para nombramientos de clases, métodos, comentarios.</td>
+        <td><input type="radio" name="item3" value="si"></td>
+        <td><input type="radio" name="item3" value="no"></td>
+        <td class="porcentaje">30%</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>Presenta el informe cumpliendo con las normas básicas de presentación de documentos.</td>
+        <td><input type="radio" name="item4" value="si"></td>
+        <td><input type="radio" name="item4" value="no"></td>
+        <td class="porcentaje">10%</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>3. EVALUACIÓN</h2>
+    <div class="evaluacion-grid">
+      <div class="input-group">
+        <label for="observaciones">Observaciones:</label>
+        <textarea id="observaciones"></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="juicio">Juicio de valor:</label>
+        <textarea id="juicio"></textarea>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <button class="btn"onclick="location.href='index.html';">Inicio</button>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <p>© 2025 Servicio Nacional de Aprendizaje SENA</p>
+  <p>Programa de Análisis y Desarrollo de Software</p>
+</footer>
 </body>
 </html>
