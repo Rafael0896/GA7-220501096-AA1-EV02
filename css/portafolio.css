@@ -89,7 +89,7 @@ nav {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(45, 62, 80, 0.8), rgba(45, 62, 80, 0.9)), url('/api/placeholder/1200/600') no-repeat center center/cover;
+  background: linear-gradient(rgba(45, 62, 80, 0.8), rgba(45, 62, 80, 0.9)), no-repeat center center/cover;
   height: 50vh;
   color: white;
   display: flex;
